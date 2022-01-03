@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
+const { VueLoaderPlugin } = require('vue-loader');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
@@ -20,6 +21,7 @@ module.exports = {
     filename: 'app.js',
   },
   plugins: [
+    new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
       title: 'Vue Playground',
       template: path.resolve(__dirname, '../public/index.html'),
@@ -45,8 +47,17 @@ module.exports = {
       },
       {
         test: /\.(scss|css)$/,
-        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
+        use: ['vue-style-loader', 'style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
+      },
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader',
       },
     ],
+  },
+  resolve: {
+    alias: {
+      vue$: 'vue/dist/vue.esm.js',
+    },
   },
 };
