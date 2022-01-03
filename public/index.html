@@ -7,8 +7,10 @@
     <title>Vue Playground</title>
   </head>
   <body>
-    <div id="root">{{ message }}</div>
-
-    <script src="app.js"></script>
+    <div id="app">
+      <p>{{ message }}</p>
+      <input v-model="message" />
+      <button v-on:click="reverseMessage">reverse</button>
+    </div>
   </body>
 </html>
