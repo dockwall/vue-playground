@@ -8,6 +8,9 @@ module.exports = {
   mode: 'development',
   devServer: {
     historyApiFallback: true,
+    client: {
+      logging: 'error',
+    },
     open: false,
     compress: true,
     hot: true,
