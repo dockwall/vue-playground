@@ -20,6 +20,12 @@ module.exports = {
     path: path.resolve(__dirname, '../dist/'),
     filename: 'app.js',
   },
+  resolve: {
+    alias: {
+      vue$: 'vue/dist/vue.esm.js',
+    },
+    extensions: ['*', '.js', '.vue', '.json'],
+  },
   module: {
     rules: [
       {
@@ -55,10 +61,4 @@ module.exports = {
     new CleanWebpackPlugin(),
     new webpack.HotModuleReplacementPlugin(),
   ],
-  resolve: {
-    alias: {
-      vue$: 'vue/dist/vue.esm.js',
-    },
-    extensions: ['*', '.js', '.vue', '.json'],
-  },
 };
