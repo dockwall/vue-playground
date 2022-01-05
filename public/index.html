@@ -11,6 +11,7 @@
       <p>{{ message }}</p>
       <input v-model="message" />
       <button v-on:click="reverseMessage">reverse</button>
+      <blog-post v-for="post in posts" :key="post.id" :title="post.title" v-bind:reverse="reverseMessage"></blog-post>
     </div>
   </body>
 </html>
