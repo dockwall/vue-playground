@@ -1,6 +1,8 @@
-import Vue from 'vue';
+import Vue from 'vue'
 
-import blogPost from './components/blog-post.vue';
+import blogPost from './components/blog-post.vue'
+
+let counter = 0
 
 const data = {
   message: 'Hello Vue!',
@@ -14,7 +16,7 @@ const data = {
     { id: 2, title: 'Blogging with Vue' },
     { id: 3, title: 'Why Vue is so fun' },
   ],
-};
+}
 
 const vm = new Vue({
   el: '#app',
@@ -24,14 +26,20 @@ const vm = new Vue({
   data: data,
   methods: {
     reverseMessage: function () {
-      this.message = this.message.split('').reverse().join('');
+      this.message = this.message.split('').reverse().join('')
     },
   },
   created: function () {
-    console.log('message is: ' + this.message);
+    console.log('message is: ' + this.message)
   },
-});
+  mounted: function () {
+    console.log(`render counter: ${++counter}`)
+  },
+  updated: function () {
+    console.log(`render counter: ${++counter}`)
+  },
+})
 
 vm.$watch('message', function (newValue) {
-  console.log('message:', newValue);
-});
+  console.log('message:', newValue)
+})
