@@ -1,5 +1,5 @@
 <template>
-  <p>I'm blog post!</p>
+  <p>I'm Blog Page! ✨</p>
 </template>
 
 <script>

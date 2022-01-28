@@ -1,5 +1,5 @@
 <template>
-  <p>I'm Main Page!</p>
+  <p>I'm Main Page! 🗂️</p>
 </template>
 
 <script>
