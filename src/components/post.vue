@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <p>I'm Blog Page №{{ $route.params.id }}!  ✨</p>
-  </div>
+  <p>In this section we're gonna talk about gender equality...</p>
 </template>
 
 <script>

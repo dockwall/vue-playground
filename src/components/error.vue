@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <p>I'm Blog Page №{{ $route.params.id }}!  ✨</p>
-  </div>
+  <p>404</p>
 </template>
 
 <script>

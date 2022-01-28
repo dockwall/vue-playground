@@ -2,7 +2,7 @@
   <div id="app">
     <button @click="goBack">Go back</button>
     <router-link to="/main">Main</router-link>
-    <router-link to="/blog">Blog</router-link>
+    <router-link to="/blog/1">Blog</router-link>
     <router-view />
   </div>
 </template>
@@ -10,7 +10,7 @@
 <script>
 export default {
   updated() {
-    console.log(this.$route.path)
+    // console.log(this.$route.path)
   },
   methods: {
     goBack() {

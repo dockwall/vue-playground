@@ -1,8 +1,8 @@
-const webpack = require('webpack');
-const path = require('path');
-const { VueLoaderPlugin } = require('vue-loader');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const webpack = require('webpack')
+const path = require('path')
+const { VueLoaderPlugin } = require('vue-loader')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
   mode: 'development',
@@ -21,6 +21,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, '../dist/'),
+    publicPath: '/',
     filename: 'app.js',
   },
   resolve: {
@@ -57,11 +58,11 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Vue Playground',
-      template: path.resolve(__dirname, '../public', 'index.html'),
+      template: './public/index.html',
       filename: 'index.html',
     }),
     new VueLoaderPlugin(),
     new CleanWebpackPlugin(),
     new webpack.HotModuleReplacementPlugin(),
   ],
-};
+}
