@@ -1,9 +1,10 @@
 <template>
-  <p>I'm blog post!</p>
+  <p>I'm Main Page!</p>
 </template>
 
 <script>
 export default {
+
 }
 </script>
 

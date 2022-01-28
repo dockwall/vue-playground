@@ -7,11 +7,6 @@
     <title>Vue Playground</title>
   </head>
   <body>
-    <div id="app">
-      <p>{{ message }}</p>
-      <input v-model="message" />
-      <button v-on:click="reverseMessage">reverse</button>
-      <blog-post v-for="post in posts" :key="post.id" :title="post.title" v-bind:reverse="reverseMessage"></blog-post>
-    </div>
+    <div id="app"></div>
   </body>
 </html>
